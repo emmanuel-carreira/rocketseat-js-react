@@ -11,6 +11,11 @@
             var lt = x < y;
             var eq = (!gt && !lt) ? True : False;
 
+            while(lt) {
+                x++;
+                lt = x < y;
+            }
+
             function sum(number_1, number_2) {
                 var result = number_1 + number_2;
                 return result;

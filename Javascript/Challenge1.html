@@ -30,6 +30,18 @@
         console.log(printAddress(address))
 
         //Exercise 2
+        function pairs(x, y) {
+            var pairsArray = [];
+            for (var i = x; i <= y; i++) {
+                if (i%2 == 0) {
+                    pairsArray.push(i);
+                }
+            }
+            return pairsArray.join(', ');
+        }
+
+        console.log(pairs(32,321));
+
         //Exercise 3
         //Exercise 4
         //Exercise 5

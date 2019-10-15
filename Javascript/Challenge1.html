@@ -55,7 +55,27 @@
         }
 
         console.log(hasSkill(skills));
+
         //Exercise 4
+        function experience(years) {
+            if (years >= 7) {
+                return "Jedi Master";
+            }
+            else if (years >= 3) {
+                return "Advanced";
+            }
+            else if (years >= 1) {
+                return "Intermediate";
+            }
+            else if (years >= 0) {
+                return "Beginner";
+            }
+            else {
+                return "Negative experience not possible!"
+            }
+        }
+
+        console.log(experience(7));
         //Exercise 5
     </script>
 </body>

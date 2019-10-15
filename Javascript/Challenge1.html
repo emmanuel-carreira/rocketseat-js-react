@@ -8,7 +8,24 @@
 </head>
 <body>
     <script>
-        
+        var address = {
+            street: "Pine street",
+            number: 1293,
+            neighborhood: "Downtown",
+            city: "São Paulo",
+            state: "SP",
+        }
+
+        function printAddress (address) {
+            var str = "The user lives in " + address.city + " / " +
+            address.state + ", in the neighborhood of " +
+            address.neighborhood + ", at street " +
+            address.street + " with nº " +
+            address.number + ".";
+            return str;
+        }
+
+        console.log(printAddress(address))
     </script>
 </body>
 </html>

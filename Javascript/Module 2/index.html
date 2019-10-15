@@ -9,10 +9,23 @@
 <body>
 
     <div id="app">
+        <input type="text" name="name" id="name" class="name">
         <button onclick="showAlert()">Press me!</button>
     </div>
 
     <script>
+        
+        var input_element = document.getElementById('name');
+        var inputs = document.getElementsByTagName('input');
+        var input_by_class = document.getElementsByClassName('name');
+        var input_by_query = document.querySelector('body div#app input');
+        var input_by_query = document.querySelector('input[name=name]');
+        var inputs_by_query = document.querySelectorAll('input');
+
+        input_element.onchange = function() {
+            console.log(input_element.value);
+        };
+
         function showAlert() {
             alert('Button was clicked!');
         }

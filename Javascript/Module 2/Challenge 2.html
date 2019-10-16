@@ -7,8 +7,26 @@
     <title>Js Challenge 2</title>
 </head>
 <body>
+
+    <button id="btn">Click me!</button>
+    <div id="square-div"></div>
+
     <script>
-        
+        //Exercise 1
+        var btn = document.getElementById('btn');
+        var square_div = document.getElementById('square-div');
+
+        btn.onclick = function() {
+            var square = document.createElement('div');
+            square.style.backgroundColor = 'red';
+            square.style.width = '100px';
+            square.style.height = '100px';
+            square_div.appendChild(square);
+        };
+
+        //Exercise 2
+        //Exercise 3
+        //Exercise 4
     </script>
 </body>
 </html>

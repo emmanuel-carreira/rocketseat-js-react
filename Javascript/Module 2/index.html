@@ -22,6 +22,15 @@
         var input_by_query = document.querySelector('input[name=name]');
         var inputs_by_query = document.querySelectorAll('input');
 
+        var link_element = document.createElement('a');
+        var text_element = document.createTextNode('Access google');
+        link_element.setAttribute('href', 'http://google.com');
+        link_element.setAttribute('title', 'Google Website');
+        link_element.appendChild(text_element);
+
+        var container_element = document.getElementById('app');
+        container_element.appendChild(link_element);
+
         input_element.onchange = function() {
             console.log(input_element.value);
         };

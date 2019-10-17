@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <input type="text" name="name">
+    <button onClick="add()">Add</button>
     <button id="btn">Click me!</button>
     <div id="square-div"></div>
 
@@ -57,6 +59,13 @@
         }
 
         //Exercise 4
+        function add(event) {
+            var input_name = document.getElementsByTagName('input')[0];
+            var new_name = document.createElement('li');
+            new_name.textContent = input_name.value;
+            list.appendChild(new_name);
+            input_name.value = '';
+        }
     </script>
 </body>
 </html>

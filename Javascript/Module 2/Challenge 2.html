@@ -15,6 +15,7 @@
         //Exercise 1
         var btn = document.getElementById('btn');
         var square_div = document.getElementById('square-div');
+        square_div.style.width = '100px';
 
         btn.onclick = function() {
             var square = document.createElement('div');
@@ -25,6 +26,24 @@
         };
 
         //Exercise 2
+        var new_Color;
+        
+        square_div.addEventListener('mouseover', function(element) {
+            new_Color = getRandomColor();
+            element.target.style.backgroundColor = new_Color;
+        });
+        
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+        
         //Exercise 3
         //Exercise 4
     </script>

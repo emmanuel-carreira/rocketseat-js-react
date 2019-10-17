@@ -11,6 +11,8 @@ var todos = [
 renderTodos();
 
 function renderTodos() {
+    list_element.innerHTML = '';
+
     for (todo of todos) {
         var todo_element = document.createElement('li');
         var todo_text = document.createTextNode(todo);

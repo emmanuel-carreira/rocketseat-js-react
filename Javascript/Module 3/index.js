@@ -8,6 +8,8 @@ var todos = [
     'Access Rocketseat community'
 ]
 
+renderTodos();
+
 function renderTodos() {
     for (todo of todos) {
         var todo_element = document.createElement('li');
@@ -18,4 +20,11 @@ function renderTodos() {
     }
 }
 
-renderTodos();
+function addTodo() {
+    var todo_text = input_element.value;
+    todos.puch(todo_text);
+    input_element.value = '';
+    renderTodos();
+}
+
+button_element.onclick = addTodo;

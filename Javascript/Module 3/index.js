@@ -27,7 +27,7 @@ function renderTodos() {
 
 function addTodo() {
     var todo_text = input_element.value;
-    todos.puch(todo_text);
+    todos.push(todo_text);
     input_element.value = '';
     renderTodos();
     saveToStorage();

@@ -19,7 +19,7 @@ checkAge(20)
     .catch(function(error) {
         console.log(error)
     });
-//Exercise 2
+//Exercise 2 and 3
 var username = document.querySelector('input');
 var submit_button = document.querySelector('button');
 var list = document.querySelector('ul');

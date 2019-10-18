@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Module 2</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" name="name" id="name" class="name">
+        <button onclick="showAlert()">Press me!</button>
+    </div>
+    <div class="box"></div>
+
+    <script>
+        
+        var input_element = document.getElementById('name');
+        var inputs = document.getElementsByTagName('input');
+        var input_by_class = document.getElementsByClassName('name');
+        var input_by_query = document.querySelector('body div#app input');
+        var input_by_query = document.querySelector('input[name=name]');
+        var inputs_by_query = document.querySelectorAll('input');
+
+        var link_element = document.createElement('a');
+        var text_element = document.createTextNode('Access google');
+        link_element.setAttribute('href', 'http://google.com');
+        link_element.setAttribute('title', 'Google Website');
+        link_element.appendChild(text_element);
+
+        var container_element = document.getElementById('app');
+        container_element.appendChild(link_element);
+
+        var box_element = document.querySelector('.box');
+        box_element.style.width = 100;
+        box_element.style.heigth = 100;
+        box_element.style.backgroundColor = '#f00';
+
+        input_element.onchange = function() {
+            console.log(input_element.value);
+        };
+
+        function showAlert() {
+            alert('Button was clicked!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Challenge 2</title>
+</head>
+<body>
+
+    <input type="text" name="name">
+    <button onClick="add()">Add</button>
+    <button id="btn">Click me!</button>
+    <div id="square-div"></div>
+
+    <script>
+        //Exercise 1
+        var btn = document.getElementById('btn');
+        var square_div = document.getElementById('square-div');
+        square_div.style.width = '100px';
+
+        btn.onclick = function() {
+            var square = document.createElement('div');
+            square.style.backgroundColor = 'red';
+            square.style.width = '100px';
+            square.style.height = '100px';
+            square_div.appendChild(square);
+        };
+
+        //Exercise 2
+        var new_Color;
+        
+        square_div.addEventListener('mouseover', function(element) {
+            new_Color = getRandomColor();
+            element.target.style.backgroundColor = new_Color;
+        });
+        
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+        
+        //Exercise 3
+        var names = ['Diego', 'Gabriel', 'Lucas'];
+        var list = document.createElement('ul');
+        square_div.after(list);
+        names.forEach(createListElement);
+
+        function createListElement(name, index, array) {
+            var name_element = document.createElement('li');
+            name_element.textContent = name;
+            list.appendChild(name_element);
+        }
+
+        //Exercise 4
+        function add(event) {
+            var input_name = document.getElementsByTagName('input')[0];
+            var new_name = document.createElement('li');
+            new_name.textContent = input_name.value;
+            list.appendChild(new_name);
+            input_name.value = '';
+        }
+    </script>
+</body>
+</html>

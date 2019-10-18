@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var x = 10, y = 5;
+            x *= y;
+            var result = soma(x, y);
+            var gt = greaterThan(x, y);
+            var lt = x < y;
+            var eq = (!gt && !lt) ? True : False;
+
+            while(lt) {
+                x++;
+                lt = x < y;
+            }
+
+            function sum(number_1, number_2) {
+                var result = number_1 + number_2;
+                return result;
+            }
+
+            function greaterThan (number_1, number_2) {
+                if(number_1 > number_2) {
+                    return True;
+                }
+                else {
+                    return False;
+                }
+            }
+        </script>
+    </body>
+</html>

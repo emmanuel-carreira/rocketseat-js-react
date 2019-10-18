@@ -22,30 +22,34 @@ checkAge(20)
 //Exercise 2
 var username = document.querySelector('input');
 var submit_button = document.querySelector('button');
+var list = document.querySelector('ul');
+var loading_element = document.createElement('li');
+loading_element.setAttribute('id', 'loading');
+loading_element.textContent = 'Loading...';
 
 submit_button.onclick = getRepos;
     
 function getRepos() {
     var url = 'https://api.github.com/users/' + username.value +'/repos'
     username.value = '';
+    list.appendChild(loading_element);
 
     axios.get(url)
         .then(function(response) {
+            loading_element.remove();
             for(var i = 0; i < response.data.length; i++){
                 var repo = response.data[i];
                 addRepo(repo.name);
             }
         })
         .catch(function(error) {
-            alert(error);
+            loading_element.remove();
+            alert('User does not exist.');
         });
 };
 
 function addRepo(repo_name) {
-    var list = document.querySelector('ul');
     var list_element = document.createElement('li');
     list_element.textContent = repo_name;
     list.appendChild(list_element);
 }
-
-//Exercise 3

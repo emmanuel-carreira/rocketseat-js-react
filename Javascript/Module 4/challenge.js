@@ -38,8 +38,7 @@ function getRepos() {
     axios.get(url)
         .then(function(response) {
             loading_element.remove();
-            for(var i = 0; i < response.data.length; i++){
-                var repo = response.data[i];
+            for(repo of response.data){
                 addRepo(repo.name);
             }
         })

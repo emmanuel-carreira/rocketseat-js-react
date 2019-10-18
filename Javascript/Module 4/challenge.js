@@ -32,6 +32,7 @@ submit_button.onclick = getRepos;
 function getRepos() {
     var url = 'https://api.github.com/users/' + username.value +'/repos'
     username.value = '';
+    removeListElements();
     list.appendChild(loading_element);
 
     axios.get(url)
@@ -52,4 +53,11 @@ function addRepo(repo_name) {
     var list_element = document.createElement('li');
     list_element.textContent = repo_name;
     list.appendChild(list_element);
+}
+
+function removeListElements() {
+    var list_elements = document.querySelectorAll('li');
+    for(element of list_elements) {
+        element.remove();
+    }
 }

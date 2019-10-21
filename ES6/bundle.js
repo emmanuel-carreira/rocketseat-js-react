@@ -63,8 +63,26 @@ function (_List) {
   return TodoList;
 }(List);
 
+var Mathematics =
+/*#__PURE__*/
+function () {
+  function Mathematics() {
+    _classCallCheck(this, Mathematics);
+  }
+
+  _createClass(Mathematics, null, [{
+    key: "sum",
+    value: function sum(a, b) {
+      return a + b;
+    }
+  }]);
+
+  return Mathematics;
+}();
+
 var my_list = new TodoList();
 my_list.showUser();
+console.log(Mathematics.sum(8, 2));
 
 document.getElementById('newtodo').onclick = function () {
   my_list.add('New Todo');

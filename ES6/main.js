@@ -21,8 +21,15 @@ class TodoList extends List {
     }
 }
 
+class Mathematics {
+    static sum(a, b) {
+        return a + b;
+    }
+}
+
 const my_list = new TodoList();
 my_list.showUser();
+console.log(Mathematics.sum(8, 2));
 
 document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');

@@ -86,6 +86,11 @@ var number = {
   first: 8,
   second: 2
 };
+var array = [1, 3, 4, 5, 8, 9];
+var new_array = array.map(function (item, index) {
+  return item + index;
+});
+console.log(new_array);
 number.third = Mathematics.sum(8, 2);
 console.log(number);
 test(10);

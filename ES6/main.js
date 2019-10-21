@@ -39,8 +39,12 @@ const array = [1, 3, 4, 5, 8, 9];
 const new_array = array.map(function(item, index) {
     return item + index;
 })
+const summed_array = array.reduce(function(total, next) {
+    return total + next;
+});
 
 console.log(new_array);
+console.log(summed_array);
 
 number.third = Mathematics.sum(8, 2);
 console.log(number);

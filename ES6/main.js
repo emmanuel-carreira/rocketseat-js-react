@@ -38,6 +38,17 @@ const number = {
 number.third = Mathematics.sum(8, 2);
 console.log(number);
 
+test(10);
+
 document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');
+}
+
+function test(x) {
+    let y = 5;
+
+    if(x > y) {
+        let y = 4
+        console.log(x + y);
+    }
 }

@@ -42,9 +42,13 @@ const new_array = array.map(function(item, index) {
 const summed_array = array.reduce(function(total, next) {
     return total + next;
 });
+const even_array = array.filter(function(item) {
+    return item % 2 === 0;
+});
 
 console.log(new_array);
 console.log(summed_array);
+console.log(even_array);
 
 number.third = Mathematics.sum(8, 2);
 console.log(number);

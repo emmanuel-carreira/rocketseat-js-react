@@ -82,3 +82,27 @@ console.log(showUser(name_3_3));
 
 //3.4
 const promise = () => (new Promise((resolve,reject) => resolve()));
+
+//Exercise 4
+
+//4.1
+const company = {
+    company_name: "Rocketseat",
+    address: {
+        company_city: "Rio do Sul",
+        company_state: "SC"
+    }
+}
+
+const { company_name, address: { company_city, company_state } } = company;
+
+console.log(company_name);
+console.log(company_city);
+console.log(company_state);
+
+//4.2
+console.log(showInfo({ name: 'Pink panther', age: 58 }));
+
+function showInfo({ name, age}) {
+    return `${name} has ${age} years old`
+}

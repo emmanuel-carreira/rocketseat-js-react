@@ -103,18 +103,32 @@ document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');
 }
 
-const user_spread = {
-    name_spread: "Duck Donald",
-    age_spread: 98,
-    company: "Walt Disney",
+const user_rest = {
+    name_rest: "Duck Donald",
+    age_rest: 98,
+    company_rest: "Walt Disney",
 }
 
-const { name_spread, ...rest } = user_spread;
+const { name_rest, ...rest } = user_rest;
 
-console.log(name_spread);
+console.log(name_rest);
 console.log(rest);
 console.log(sumOverload(1, 1, 2, 3, 5, 8, 13, 21, 34))
 
 function sumOverload(...params) {
     return params.reduce((total, next) => total + next);
 }
+
+const array_odd = [1, 3, 5];
+const array_even = [2, 4, 6];
+const array_some_naturals = [ ...array_odd, array_even ];
+
+const user_spread = {
+    name_spread: "Uncle Scrooge",
+    age_spread: "156",
+    company_spread: "Walt Disney",
+}
+
+const user_spread_second = { ...user_spread, age_spread: 184 };
+
+console.log(user_spread_second)

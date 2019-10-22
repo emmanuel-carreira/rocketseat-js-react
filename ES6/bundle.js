@@ -1,5 +1,11 @@
 "use strict";
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -167,16 +173,16 @@ document.getElementById('newtodo').onclick = function () {
   my_list.add('New Todo');
 };
 
-var user_spread = {
-  name_spread: "Duck Donald",
-  age_spread: 98,
-  company: "Walt Disney"
+var user_rest = {
+  name_rest: "Duck Donald",
+  age_rest: 98,
+  company_rest: "Walt Disney"
 };
 
-var name_spread = user_spread.name_spread,
-    rest = _objectWithoutProperties(user_spread, ["name_spread"]);
+var name_rest = user_rest.name_rest,
+    rest = _objectWithoutProperties(user_rest, ["name_rest"]);
 
-console.log(name_spread);
+console.log(name_rest);
 console.log(rest);
 console.log(sumOverload(1, 1, 2, 3, 5, 8, 13, 21, 34));
 
@@ -189,3 +195,18 @@ function sumOverload() {
     return total + next;
   });
 }
+
+var array_odd = [1, 3, 5];
+var array_even = [2, 4, 6];
+var array_some_naturals = [].concat(array_odd, [array_even]);
+var user_spread = {
+  name_spread: "Uncle Scrooge",
+  age_spread: "156",
+  company_spread: "Walt Disney"
+};
+
+var user_spread_second = _objectSpread({}, user_spread, {
+  age_spread: 184
+});
+
+console.log(user_spread_second);

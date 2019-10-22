@@ -132,3 +132,8 @@ const user_spread = {
 const user_spread_second = { ...user_spread, age_spread: 184 };
 
 console.log(user_spread_second)
+
+const string = "learning template literals!";
+const learning = `Today i was: ${string}`
+
+console.log(learning);

@@ -210,3 +210,6 @@ var user_spread_second = _objectSpread({}, user_spread, {
 });
 
 console.log(user_spread_second);
+var string = "learning template literals!";
+var learning = "Today i was: ".concat(string);
+console.log(learning);

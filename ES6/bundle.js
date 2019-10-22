@@ -120,9 +120,17 @@ number.third = Mathematics.sum(8, 2);
 console.log(number);
 test(10);
 
-document.getElementById('newtodo').onclick = function () {
-  my_list.add('New Todo');
+var multiply_arrow = function multiply_arrow() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+  return a * b;
 };
+
+function multiply() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+  return a * b;
+}
 
 function test(x) {
   var y = 5;
@@ -132,3 +140,7 @@ function test(x) {
     console.log(x + _y);
   }
 }
+
+document.getElementById('newtodo').onclick = function () {
+  my_list.add('New Todo');
+};

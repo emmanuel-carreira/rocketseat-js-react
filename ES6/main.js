@@ -64,8 +64,10 @@ console.log(number);
 
 test(10);
 
-document.getElementById('newtodo').onclick = function() {
-    my_list.add('New Todo');
+const multiply_arrow = (a = 5, b = 10) => a * b;
+
+function multiply(a = 3, b = 5) {
+    return a * b;
 }
 
 function test(x) {
@@ -75,4 +77,8 @@ function test(x) {
         let y = 4
         console.log(x + y);
     }
+}
+
+document.getElementById('newtodo').onclick = function() {
+    my_list.add('New Todo');
 }

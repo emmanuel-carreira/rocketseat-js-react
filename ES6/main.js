@@ -102,3 +102,14 @@ function showName({ name }) {
 document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');
 }
+
+const user_spread = {
+    name_spread: "Duck Donald",
+    age_spread: 98,
+    company: "Walt Disney",
+}
+
+const { name_spread, ...rest } = user_spread;
+
+console.log(name_spread);
+console.log(rest);

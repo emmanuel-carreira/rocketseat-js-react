@@ -64,6 +64,22 @@ console.log(number);
 
 test(10);
 
+const user = {
+    name: 'Woodpicker',
+    age: 54,
+    address: {
+        city: 'Orlando',
+        state: 'Florida',
+    }
+}
+
+const { name, age, address: { city } } = user;
+console.log(name);
+console.log(age);
+console.log(city);
+
+console.log(showName(user))
+
 const multiply_arrow = (a = 5, b = 10) => a * b;
 
 function multiply(a = 3, b = 5) {
@@ -78,6 +94,8 @@ function test(x) {
         console.log(x + y);
     }
 }
+
+const showName = ({ name }) => name; 
 
 document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');

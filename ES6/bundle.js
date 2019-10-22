@@ -119,6 +119,21 @@ console.log(arrow());
 number.third = Mathematics.sum(8, 2);
 console.log(number);
 test(10);
+var user = {
+  name: 'Woodpicker',
+  age: 54,
+  address: {
+    city: 'Orlando',
+    state: 'Florida'
+  }
+};
+var name = user.name,
+    age = user.age,
+    city = user.address.city;
+console.log(name);
+console.log(age);
+console.log(city);
+console.log(showName(user));
 
 var multiply_arrow = function multiply_arrow() {
   var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
@@ -140,6 +155,11 @@ function test(x) {
     console.log(x + _y);
   }
 }
+
+var showName = function showName(_ref) {
+  var name = _ref.name;
+  return name;
+};
 
 document.getElementById('newtodo').onclick = function () {
   my_list.add('New Todo');

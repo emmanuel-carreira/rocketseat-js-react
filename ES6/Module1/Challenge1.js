@@ -54,3 +54,31 @@ function doubleAge(user) {
     user.age = user.age * 2;
     return user;
 }
+
+//Exercise 3
+
+//3.1
+const arr = [1, 2, 3, 4, 5];
+arr.map((item) => item+10);
+
+//3.2
+const user_3_2 = {
+    name: "Diego", 
+    age: 23 
+};
+
+const showAge = (user) => user.age;
+
+console.log(showAge(user_3_2));
+
+//3.3
+const name_3_3 = "Diego";
+const age_3_3 = 23;
+
+const showUser = (name, age) => ( {name, age} );
+
+console.log(showUser(name_3_3, age_3_3));
+console.log(showUser(name_3_3));
+
+//3.4
+const promise = () => (new Promise((resolve,reject) => resolve()));

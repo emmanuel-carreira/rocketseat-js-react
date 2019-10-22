@@ -113,3 +113,8 @@ const { name_spread, ...rest } = user_spread;
 
 console.log(name_spread);
 console.log(rest);
+console.log(sumOverload(1, 1, 2, 3, 5, 8, 13, 21, 34))
+
+function sumOverload(...params) {
+    return params.reduce((total, next) => total + next);
+}

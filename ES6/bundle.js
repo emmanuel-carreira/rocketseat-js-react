@@ -178,3 +178,14 @@ var name_spread = user_spread.name_spread,
 
 console.log(name_spread);
 console.log(rest);
+console.log(sumOverload(1, 1, 2, 3, 5, 8, 13, 21, 34));
+
+function sumOverload() {
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
+  }
+
+  return params.reduce(function (total, next) {
+    return total + next;
+  });
+}

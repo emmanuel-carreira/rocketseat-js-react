@@ -37,11 +37,20 @@ const users = [
 ];
 
 const ages = users.map((user) => user.age);
+
 const adults_rocketseat = users.filter( (user) => (user.age >= 18) && 
                                         (user.company === "Rocketseat")
                                       );
 const googlers = users.find((user) => user.company === "Google");
 
+var double_age_under_50 = users.map((user) => doubleAge(user))
+                               .filter((user) => user.age < 50);
 console.log(ages);
 console.log(adults_rocketseat);
 console.log(googlers);
+console.log(double_age_under_50);
+
+function doubleAge(user) {
+    user.age = user.age * 2;
+    return user;
+}

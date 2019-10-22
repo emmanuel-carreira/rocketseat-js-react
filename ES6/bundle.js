@@ -213,3 +213,11 @@ console.log(user_spread_second);
 var string = "learning template literals!";
 var learning = "Today i was: ".concat(string);
 console.log(learning);
+var prime_number = 7;
+var prime_bool = true;
+var prime = {
+  prime_number: prime_number,
+  prime_bool: prime_bool,
+  set: "Naturals"
+};
+console.log(prime);

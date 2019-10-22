@@ -137,3 +137,14 @@ const string = "learning template literals!";
 const learning = `Today i was: ${string}`
 
 console.log(learning);
+
+const prime_number = 7;
+const prime_bool = true;
+
+const prime = {
+    prime_number,
+    prime_bool,
+    set: "Naturals",
+};
+
+console.log(prime);

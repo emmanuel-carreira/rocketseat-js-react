@@ -49,10 +49,15 @@ const four = array.find(function(item) {
     return item === 4;
 })
 
+new_array = array.map(item => item * 2);
+
+const arrow = () => ({ str: 'arrow function is awesome!' });
+
 console.log(new_array);
 console.log(summed_array);
 console.log(even_array);
 console.log(four);
+console.log(arrow());
 
 number.third = Mathematics.sum(8, 2);
 console.log(number);

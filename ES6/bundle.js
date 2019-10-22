@@ -18,6 +18,8 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
+
 var List =
 /*#__PURE__*/
 function () {
@@ -99,10 +101,21 @@ var even_array = array.filter(function (item) {
 var four = array.find(function (item) {
   return item === 4;
 });
+new_array = (_readOnlyError("new_array"), array.map(function (item) {
+  return item * 2;
+}));
+
+var arrow = function arrow() {
+  return {
+    str: 'arrow function is awesome!'
+  };
+};
+
 console.log(new_array);
 console.log(summed_array);
 console.log(even_array);
 console.log(four);
+console.log(arrow());
 number.third = Mathematics.sum(8, 2);
 console.log(number);
 test(10);

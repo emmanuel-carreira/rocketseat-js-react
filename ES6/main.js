@@ -49,7 +49,7 @@ const four = array.find(function(item) {
     return item === 4;
 })
 
-new_array = array.map(item => item * 2);
+const map_array = array.map(item => item * 2);
 
 const arrow = () => ({ str: 'arrow function is awesome!' });
 
@@ -95,7 +95,9 @@ function test(x) {
     }
 }
 
-const showName = ({ name }) => name; 
+function showName({ name }) {
+    return name;
+} 
 
 document.getElementById('newtodo').onclick = function() {
     my_list.add('New Todo');

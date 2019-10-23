@@ -106,3 +106,36 @@ console.log(showInfo({ name: 'Pink panther', age: 58 }));
 function showInfo({ name, age}) {
     return `${name} has ${age} years old`
 }
+
+//Exercise 5
+
+//5.1
+const numbers = [1, 2, 3, 4, 5, 6];
+const [x, ...y] = numbers;
+
+console.log(x);
+console.log(y);
+
+function sumOverload(...params) {
+    return params.reduce((total, next) => total + next);
+}
+
+console.log(sumOverload(1,2,3,4,5,6));
+console.log(sumOverload(1,2));
+
+//5.2
+const user_5_2 = {
+    name: "Duck Donald",
+    age: 74,
+    address: {
+        city: "Duckburg",
+        state: "Calisota",
+        country: "USA",
+    }
+};
+
+const user_5_2_2 = {...user_5_2, name: "Gabriel"};
+const user_5_2_3 = {...user_5_2, address: { ...user_5_2.address, city: "Lontras" } };
+
+console.log(user_5_2_2);
+console.log(user_5_2_3);

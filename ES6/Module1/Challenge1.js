@@ -139,3 +139,10 @@ const user_5_2_3 = {...user_5_2, address: { ...user_5_2.address, city: "Lontras"
 
 console.log(user_5_2_2);
 console.log(user_5_2_3);
+
+//Exercise 6
+const user_6 = "Diego";
+const age_6 = 23;
+const log = `The user ${user_6} is ${age_6} years old`;
+
+console.log(log);

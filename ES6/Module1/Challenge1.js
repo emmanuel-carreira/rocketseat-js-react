@@ -141,8 +141,20 @@ console.log(user_5_2_2);
 console.log(user_5_2_3);
 
 //Exercise 6
-const user_6 = "Diego";
+const user_6 = "Luisinho";
 const age_6 = 23;
 const log = `The user ${user_6} is ${age_6} years old`;
 
 console.log(log);
+
+//Exercise 7
+const name = "Zezinho";
+const age = 23;
+
+const user_7 = {
+    name,
+    age,
+    city: "Duckburg",
+}
+
+console.log(user_7);
